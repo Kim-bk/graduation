@@ -217,7 +217,7 @@ body {
 /* decorative inner gold border */
 .banner__inner {
   position: relative;
-  height: clamp(170px, 46vw, 275px);
+  height: clamp(195px, 53vw, 280px);
   border-left: 1px solid rgba(230, 200, 119, 0.55);
   border-right: 1px solid rgba(230, 200, 119, 0.55);
   border-bottom: 1px solid rgba(230, 200, 119, 0.35);
