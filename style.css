@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -438,13 +439,12 @@ body {
   flex-shrink: 0;
 }
 
-/* Row: Thursday ──── 23 ──── 16:00 */
+/* Row: JULY ── 23 ── 16:00 */
 .datetime__row {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   width: 100%;
-  margin-left: 30px;
   margin-top: -20px;
 }
 
@@ -461,8 +461,8 @@ body {
   font-weight: 600;
   letter-spacing: 0.1em;
   color: var(--burgundy);
-  text-align: right;
-  padding-right: clamp(6px, 2vw, 12px);
+  text-align: center;
+  /* padding-right: clamp(6px, 2vw, 12px); */
   white-space: nowrap;
   border-top: 1.5px solid var(--gold-foil);
   border-bottom: 1.5px solid var(--gold-foil);
@@ -473,8 +473,8 @@ body {
   font-weight: 600;
   letter-spacing: 0.1em;
   color: var(--burgundy);
-  text-align: left;
-  padding-left: clamp(6px, 2vw, 12px);
+  text-align: center;
+  /* padding-left: clamp(6px, 2vw, 12px); */
   white-space: nowrap;
   border-top: 1.5px solid var(--gold-foil);
   border-bottom: 1.5px solid var(--gold-foil);
@@ -639,28 +639,93 @@ body {
 }
 
 /* ============ RESPONSIVE ============ */
+
+/* ── Extra-small phones (≤ 360px: iPhone SE 1st gen, Galaxy S8) ── */
 @media (max-width: 360px) {
+  body {
+    padding: 10px;
+  }
+  .card {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
   .banner {
     width: 30px;
+  }
+  .banner--left {
+    left: 8px;
+  }
+  .banner--right {
+    right: 8px;
   }
   .banner__script {
     font-size: 0.9rem;
   }
   .masthead {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 38px;
+    padding-right: 38px;
   }
   .title__cap {
     right: -14px;
   }
+  .name {
+    font-size: 1.9rem;
+  }
+  .datetime__num {
+    font-size: 3.6rem;
+  }
+  .btn-directions {
+    padding: 11px 20px;
+    width: 100%;
+  }
 }
 
+/* ── Landscape on small phones (viewport height ≤ 500px) ── */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    padding: 8px 16px;
+    align-items: flex-start;
+  }
+  .card {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+  .title-block {
+    margin-top: 10px;
+  }
+  .name-block {
+    margin-top: 20px;
+  }
+  .datetime {
+    margin-top: 14px;
+  }
+  .location {
+    margin-top: 14px;
+  }
+  .banner__inner {
+    min-height: 120px;
+  }
+  .datetime__num {
+    font-size: 3.2rem;
+  }
+}
+
+/* ── Tablets and up (≥ 768px) ── */
 @media (min-width: 768px) {
   .card {
     padding-bottom: 54px;
   }
   .title__cap {
     right: -34px;
+  }
+  .name-block {
+    margin-top: 56px;
+  }
+  .datetime {
+    margin-top: 36px;
+  }
+  .location {
+    margin-top: 36px;
   }
 }
 
