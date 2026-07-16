@@ -217,7 +217,7 @@ body {
 /* decorative inner gold border */
 .banner__inner {
   position: relative;
-  height: 100%;
+  height: clamp(170px, 46vw, 275px);
   border-left: 1px solid rgba(230, 200, 119, 0.55);
   border-right: 1px solid rgba(230, 200, 119, 0.55);
   border-bottom: 1px solid rgba(230, 200, 119, 0.35);
@@ -227,7 +227,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  min-height: clamp(170px, 42vw, 220px);
+  overflow: hidden;
 }
 
 .banner__inner > * {
@@ -259,6 +259,7 @@ body {
 
 .banner__code {
   writing-mode: vertical-rl;
+  white-space: nowrap;
   font-family: "Playfair Display", serif;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -703,7 +704,7 @@ body {
     margin-top: 14px;
   }
   .banner__inner {
-    min-height: 120px;
+    height: 120px;
   }
   .datetime__num {
     font-size: 3.2rem;
